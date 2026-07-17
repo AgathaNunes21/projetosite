@@ -1,0 +1,196 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+
+header{
+    background:linear-gradient(135deg,#5b4bff,#8d7dff);
+    color:white;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.header h1{
+    margin-bottom:15px;
+    font-size:40px;
+}
+
+/* ===== MENU ===== */
+
+.nav-menu ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+    color:#ffe600;
+}
+
+/* ===== CONTEÚDO ===== */
+
+main{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* ===== FOTO ===== */
+
+main img{
+    display:block;
+    margin:30px auto;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #5b4bff;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+main img:hover{
+    transform:scale(1.05);
+}
+
+/* ===== TÍTULOS ===== */
+
+h2{
+    color:#5b4bff;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+/* ===== PARÁGRAFOS ===== */
+
+p{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+/* ===== SEÇÕES ===== */
+
+section{
+    background:white;
+    margin-top:35px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+section:hover{
+    transform:translateY(-5px);
+}
+
+/* ===== LISTAS ===== */
+
+ul{
+    list-style:none;
+}
+
+section ul li{
+    background:#ece9ff;
+    margin:12px auto;
+    width:250px;
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+    transition:.3s;
+}
+
+section ul li:hover{
+    background:#5b4bff;
+    color:white;
+    transform:scale(1.05);
+}
+
+/* ===== VÍDEO ===== */
+
+iframe{
+    display:block;
+    margin:auto;
+    width:100%;
+    max-width:700px;
+    height:400px;
+    border-radius:15px;
+}
+
+/* ===== CONTATO ===== */
+
+#contato p{
+    font-size:18px;
+}
+
+/* ===== RODAPÉ ===== */
+
+footer{
+    background:#5b4bff;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media(max-width:768px){
+
+.header h1{
+    font-size:30px;
+}
+
+.nav-menu ul{
+    flex-direction:column;
+    gap:12px;
+}
+
+iframe{
+    height:250px;
+}
+
+main img{
+    width:170px;
+    height:170px;
+}
+
+section ul li{
+    width:100%;
+}
+
+}
+
+#inicio,
+#habilidades,
+#hobbies,
+#contato {
+    scroll-margin-top: 120px;
+}
