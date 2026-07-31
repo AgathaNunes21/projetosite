@@ -1,232 +1,446 @@
-/* ===== RESET ===== */
+/* ==========================================
+   1. RESET BÁSICO
+   ========================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
+section,
+div[id] {
+  scroll-margin-top: 40px; 
+}
+
+/* ==========================================
+   2. ESTILOS GERAIS DA PÁGINA
+   ========================================== */
 body {
-    background: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
+  background-color: #0c0d14;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-/* ===== CABEÇALHO ===== */
-header {
-    background: linear-gradient(135deg, #5b4bff, #8d7dff);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-}
-
-.header h1 {
-    margin-bottom: 15px;
-    font-size: 40px;
-}
-
-/* ===== MENU ===== */
-.nav-menu ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.nav-menu a:hover {
-    color: #ece9ff;
-}
-
-/* ===== CONTEÚDO PRINCIPAL ===== */
-main, section {
-    width: 90%;
-    max-width: 800px; 
-    margin: 35px auto 0 auto;
-}
-
-main {
-    padding: 40px 0 0 0;
-}
-
-/* ===== FOTO ===== */
-main img {
-    display: block;
-    margin: 30px auto;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid #5b4bff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-    transition: .4s;
-}
-
-main img:hover {
-    transform: scale(1.05);
-}
-
-/* ===== TÍTULOS ===== */
 h2 {
-    color: #5b4bff;
-    margin-bottom: 20px;
-    text-align: center;
+  color: #a855f7;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
-/* ===== PARÁGRAFOS ===== */
-p {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
+/* ==========================================
+   3. MENU DE NAVEGAÇÃO (NAV)
+   ========================================== */
+nav {
+  padding: 20px 10px;
+  border-bottom: 1px solid #27272a;
+  width: 100%;
 }
 
-/* ===== SEÇÕES GERAIS ===== */
-section {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-/* ===== HABILIDADES E HOBBIES ===== */
-.secao-bloco {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
+nav a {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-.caixa-painel {
-    background: #ffffff;
-    flex: 1;
-    min-width: 250px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
-    transition: .3s;
+nav a:hover,
+nav a.active {
+  color: #a855f7;
 }
 
-.caixa-painel:hover {
-    transform: translateY(-5px);
+/* ==========================================
+   4. SEÇÃO DE INÍCIO (HERO)
+   ========================================== */
+#inicio {
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #27272a;
+  width: 100%;
 }
 
-/* ===== LISTAS ===== */
-ul {
-    list-style: none;
+.inicio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.caixa-painel ul li {
-    background: #ece9ff;
-    margin: 12px auto;
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    transition: .3s;
+.inicio-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.caixa-painel ul li:hover {
-    background: #5b4bff;
-    color: white;
-    transform: scale(1.03);
+.inicio-texto h2 {
+  margin: 0 0 5px 0;
 }
 
-/* ===== REDES SOCIAIS ===== */
-#redes-sociais ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.inicio-texto h1 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
 }
 
-#redes-sociais ul li {
-    background: #ece9ff;
-    padding: 0;
-    width: 140px;
-    border-radius: 8px;
-    transition: .3s;
+.inicio-texto p {
+  color: #a1a1aa;
+  max-width: 500px;
+  margin: 0 0 20px 0;
 }
 
-#redes-sociais ul li a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #5b4bff;
-    font-weight: bold;
+.foto-wrapper img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 60px 10px rgba(138, 43, 226, 0.5);
 }
 
-#redes-sociais ul li:hover {
-    background: #5b4bff;
-    transform: translateY(-3px);
+.btn-saiba-mais {
+  background-color: #8a2be2;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
-#redes-sociais ul li:hover a {
-    color: white;
+.btn-saiba-mais:hover {
+  background-color: #a855f7;
+  transform: translateY(-2px);
 }
 
-/* ===== VÍDEO ===== */
-iframe {
-    display: block;
-    margin: auto;
-    width: 100%;
-    max-width: 700px;
-    height: 400px;
-    border-radius: 15px;
-    border: none;
+/* ==========================================
+   5. SEÇÃO SOBRE MIM
+   ========================================== */
+#sobre-mim {
+  padding: 60px 20px;
+  border-bottom: 1px solid #27272a;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* ===== RODAPÉ ===== */
+.sobre-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.sobre-texto {
+  text-align: left;
+  max-width: 600px;
+}
+
+.sobre-texto h2 {
+  color: #a855f7;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sobre-texto p {
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+/* ==========================================
+   6. HABILIDADES
+   ========================================== */
+#habilidades {
+  border-bottom: 1px solid #27272a;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#habilidades h2 {
+  color: #a855f7;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 40px; 
+}
+
+.habilidades-lista {
+  list-style: none;
+  display: flex;         
+  justify-content: center; 
+  align-items: stretch;  
+  flex-wrap: wrap;       
+  gap: 20px;              
+  max-width: 900px;     
+  margin: 0 auto;         
+  padding: 0;
+}
+
+.habilidades-lista li {
+  background-color: #161722;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;           
+  box-sizing: border-box;   
+  transition: all 0.3s ease;
+}
+
+.habilidades-lista li:hover {
+  border-color: #a855f7;
+  transform: translateY(-5px); 
+}
+
+/* ==========================================
+   7. HOBBIES
+   ========================================== */
+#hobbies {
+  border-bottom: 1px solid #27272a;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#hobbies h2 {
+  color: #a855f7;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+#hobbies ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#hobbies li {
+  background: none;        
+  border: none;            
+  padding: 0;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#hobbies li:hover {
+  color: #a855f7;
+  transform: translateY(-5px);
+}
+
+/* ==========================================
+   8. GALERIA E VÍDEO
+   ========================================== */
+#galeria {
+  padding: 60px 15px;
+  text-align: center;
+  border-bottom: 1px solid #27272a;
+}
+
+#galeria h2 {
+  color: #a855f7;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+#galeria img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#video {
+  text-align: center;
+  border-bottom: 1px solid #27272a;
+  padding: 60px 20px;
+}
+
+#video h2 {
+  margin-bottom: 40px;
+}
+
+#video iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   9. FORMULÁRIO DE CONTATO
+   ========================================== */
+#contato {
+  padding: 60px 20px;
+}
+
+#contato h2 {
+  margin-bottom: 40px;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;                    
+  width: 100%;              
+  margin: 0 auto;      
+}
+
+.campos-esquerda,
+.campos-direita {
+  display: flex;
+  flex-direction: column;
+}
+
+.campos-direita textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 110px;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  resize: vertical;
+}
+
+#contato input,
+#contato textarea {
+  background-color: #161722;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#contato button {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: center;
+  width: 160px;
+  transition: background-color 0.3s ease;
+}
+
+#contato button:hover {
+  background-color: #a855f7;
+}
+
+/* ==========================================
+   10. RODAPÉ
+   ========================================== */
 footer {
-    background: #5b4bff;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 60px;
+  padding: 30px 20px;
+  border-top: 1px solid #27272a;
+  font-size: 14px;
+  color: #a1a1aa;
 }
 
-/* ===== RESPONSIVO (CELULAR) ===== */
-@media(max-width: 768px) {
-    .header h1 {
-        font-size: 30px;
+footer a {
+  color: #a855f7;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* ==========================================
+   1. ESTILO BASE (CELULARES - Telas pequenas)
+   ========================================== */
+body {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+/* ==========================================
+   2. TABLETS (A partir de 768px)
+   ========================================== */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 20px;
     }
 
-    .nav-menu ul {
-        gap: 15px;
-    }
-
-    iframe {
-        height: 250px;
-    }
-
-    main img {
-        width: 170px;
-        height: 170px;
-    }
-    
-    .secao-bloco {
-        flex-direction: column;
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
     }
 }
 
-/* ===== AJUSTE DE ROLAGEM DO MENU ===== */
-#inicio,
-#habilidades,
-#redes-sociais {
-    scroll-margin-top: 30px;
+/* ==========================================
+   3. COMPUTADORES / DESKTOP (A partir de 1024px)
+   ========================================== */
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 992px; /* Ou 1200px para telas maiores */
+    }
+}
+
+/* ==========================================
+   4. TELAS GRANDES / FULL HD (A partir de 1200px)
+   ========================================== */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }

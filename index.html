@@ -3,113 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="header">
-      <h1>Agatha Nunes</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="active">Início</a></li>
+        <li><a href="#sobre-mim">Sobre Mim</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#video">Vídeo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#habilidades">Habilidades & Hobbies</a></li>
-          <li><a href="#redes-sociais">Redes Sociais</a></li>
-        </ul>
-      </nav>
-    </header>
+    <section id="inicio">
+      <div class="inicio-container">
+        <div class="foto-wrapper">
+          <img src="img/foto.jpg" alt="Agatha Nunes" />
+        </div>
 
-    <main id="inicio">
-      <h2>Bem-Vindo(a)!</h2>
-
-      <div class="container-perfil">
-        <img src="img/foto.jpg" alt="Foto de Agatha Nunes" />
-
-        <div class="textos-lado-direito">
+        <div class="inicio-texto">
+          <h2>OLÁ, EU SOU</h2>
+          <h1>Agatha Nunes</h1>
           <p>
-            Olá! Meu nome é Agatha Nunes e este é o meu primeiro site pessoal
-            desenvolvido com HTML e CSS.
+            Estudante de programação, apaixonada por aprender novas tecnologias
+            e desenvolver projetos.
+          </p>
+          <a href="#sobre-mim" class="btn-saiba-mais">Saiba mais ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ID corrigido para 'sobre-mim' -->
+    <section id="sobre-mim">
+      <div class="sobre-container">
+        <div class="sobre-texto">
+          <h2>SOBRE MIM</h2>
+          <p>Me chamo Agatha Nunes.</p>
+          <p>
+            Tenho 21 anos e atualmente sou estudante de programação do curso
+            FullStack. Estou aprendendo HTML, CSS e JavaScript e busco evoluir
+            cada vez mais para me tornar uma desenvolvedora.
           </p>
         </div>
       </div>
-    </main>
-
-    <section id="sobre-mim">
-      <h2>Sobre Mim</h2>
-      <p>
-        Sou apaixonada por tecnologia, criatividade e por transformar ideias em experiências incríveis. 
-        Atualmente sou estudante do curso Desenvolvedor Full Stack, onde estou aprendendo a criar sites 
-        e desenvolver novas habilidades na área da programação.
-      </p>
     </section>
 
     <section id="habilidades">
-      <section class="secao-bloco">
-        
-        <div class="caixa-painel">
-          <h2>Habilidades</h2>
-          <ul>
-            <li>Proatividade</li>
-            <li>Comprometimento</li>
-            <li>Gestão do tempo</li>
-            <li>Dedicação</li>
-          </ul>
-        </div>
-
-        <div class="caixa-painel">
-          <h2>Hobbies</h2>
-          <ul>
-            <li>Assistir Séries</li>
-            <li>Estudar</li>
-            <li>Cantar</li>
-            <li>Ler</li>
-          </ul>
-        </div>
-
-      </section>
-    </section> 
-    <section id="musica">
-      <h2>Música Favorita</h2>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/j045yEf2cLg?si=GoxaKkyPnWyDajGS"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;" 
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      >
-      </iframe>
-    </section>
-
-    <!-- Corrigido: Removido o espaço do ID (redes sociais -> redes-sociais) -->
-    <section id="redes-sociais">
-      <h2>Minhas Redes Sociais</h2>
-      <p>Me acompanhe nas minhas redes sociais:</p>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/agyttha_" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/AgathaNunes21" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/agatha-nunes/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-        </li>
+      <h2>HABILIDADES</h2>
+      <ul class="habilidades-lista">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Trabalho em equipe</li>
+        <li>Aprendizado rápido</li>
       </ul>
     </section>
 
+    <section id="hobbies">
+      <h2>HOBBIES</h2>
+      <ul class="hobbies-lista">
+        <li>🎵 Ouvir música</li>
+        <li>📷 Fotografar</li>
+        <li>🎬 Assistir filmes</li>
+        <li>💻 Programar</li>
+        <li>📚 Aprender coisas novas</li>
+      </ul>
+    </section>
+
+    <section id="galeria">
+      <h2>GALERIA</h2>
+      <img src="img/foto1.jpg" alt="foto1" />
+      <img src="img/foto2.jpg" alt="foto2" />
+      <img src="img/foto3.jpg" alt="foto3" />
+      <img src="img/foto4.jpg" alt="foto4" />
+    </section>
+
+    <section id="video">
+      <h2>VÍDEO</h2>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/JaTf3dhx464?si=8qURUtDizQO-NOBu"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share;"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="contato">
+      <h2>CONTATO</h2>
+
+      <form action="mailto:agathanunes.contato@gmail.com" method="post">
+        <div class="form-grid">
+          <div class="campos-esquerda">
+            <div class="input-group">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="nome" name="nome" placeholder="Nome" />
+            </div>
+
+            <div class="input-group">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="E-mail" />
+            </div>
+          </div>
+
+          <div class="campos-direita">
+            <div class="textarea-group">
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Mensagem"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-enviar">
+          <i class="fa-regular fa-paper-plane"></i> Enviar
+        </button>
+      </form>
+    </section>
+
     <footer>
-      <p>&copy; 2026 - Desenvolvido por Agatha Nunes.</p>
+      <p>&copy; 2026 - Site desenvolvido por Agatha Nunes</p>
+      <a href="https://github.com/AgathaNunes21">GitHub</a>
+      <a href="https://www.instagram.com/agyttha_">Instagram</a>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
