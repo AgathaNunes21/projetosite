@@ -423,7 +423,6 @@ body {
     }
 }
 
-<<<<<<< HEAD
 /* ==========================================
    3. COMPUTADORES / DESKTOP (A partir de 1024px)
    ========================================== */
@@ -433,7 +432,7 @@ body {
     }
 
     .container {
-        max-width: 992px; /* Ou 1200px para telas maiores */
+        max-width: 992px; 
     }
 }
 
@@ -445,11 +444,4 @@ body {
         max-width: 1140px;
     }
 }
-=======
-/* ===== AJUSTE DE ROLAGEM DO MENU ===== */
-#inicio,
-#habilidades,
-#redes-sociais {
-    scroll-margin-top: 30px;
-} 
->>>>>>> 34e367885ec9a0d87331cc82dc0000281941ce56
+
