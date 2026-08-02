@@ -1,89 +1,101 @@
-document.addEventListener('DOMContentLoaded', () => {
+// ================================
+// FORMULÁRIO DE CONTATO
+// ================================
 
-  // ================================================
-  // 1. VALIDAÇÃO E ENVIO DO FORMULÁRIO DE CONTATO
-  // ================================================
-  const form = document.querySelector('#contato form');
-  const inputNome = document.querySelector('#nome');
-  const inputEmail = document.querySelector('#email');
-  const inputMensagem = document.querySelector('#mensagem');
+const formulario = document.querySelector("form");
 
-  if (form) {
-    form.addEventListener('submit', (event) => {
+const nome = document.querySelector("#nome");
+const email = document.querySelector("#email");
+const mensagem = document.querySelector("#mensagem");
 
-      event.preventDefault();
+formulario.addEventListener("submit", function(event){
 
-      const nome = inputNome.value.trim();
-      const email = inputEmail.value.trim();
-      const mensagem = inputMensagem.value.trim();
+    event.preventDefault();
 
-      if (nome === '' || email === '' || mensagem === '') {
-        alert('Por favor, preencha todos os campos do formulário antes de enviar!');
-        return;
-      }
+    let nomeDigitado = nome.value.trim();
+    let emailDigitado = email.value.trim();
+    let mensagemDigitada = mensagem.value.trim();
 
-      alert(`Obrigado pelo contato, ${nome}! Sua mensagem foi enviada com sucesso.`);
-      
-      form.reset();
-    });
-  }
+    if(nomeDigitado == "" || emailDigitado == "" || mensagemDigitada == ""){
 
-  // ================================================
-  // 2. ROLAGEM SUAVE E DESTAQUE NO MENU DE NAVEGAÇÃO
-  // ================================================
-  const navLinks = document.querySelectorAll('nav ul li a');
-  const sections = document.querySelectorAll('section');
+        alert("Preencha todos os campos.");
 
-  // Rolagem suave ao clicar no menu
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href');
-      
-      // Se for um link interno da página
-      if (targetId.startsWith('#')) {
-        e.preventDefault();
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: 'smooth'
-          });
+    }else{
+
+        alert("Mensagem enviada com sucesso!");
+
+        formulario.reset();
+
+    }
+
+});
+
+// ================================
+// GALERIA DE FOTOS
+// ================================
+
+const fotos = document.querySelectorAll("#galeria img");
+
+fotos.forEach(function(foto){
+
+    foto.addEventListener("click", function(){
+
+        if(foto.style.transform == "scale(1.2)"){
+
+            foto.style.transform = "scale(1)";
+
+        }else{
+
+            foto.style.transform = "scale(1.2)";
+
         }
-      }
-    });
-  });
 
-  window.addEventListener('scroll', () => {
-    let currentSectionId = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      const sectionHeight = section.offsetHeight;
-
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        currentSectionId = section.getAttribute('id');
-      }
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSectionId}`) {
-        link.classList.add('active');
-      }
+});
+
+// ================================
+// BOTÃO "SAIBA MAIS"
+// ================================
+
+const botao = document.querySelector(".btn-saiba-mais");
+
+botao.addEventListener("click", function(){
+
+    console.log("Botão Saiba Mais clicado.");
+
+});
+
+// ================================
+// FOTO DE PERFIL
+// ================================
+
+const fotoPerfil = document.querySelector(".foto-wrapper img");
+
+fotoPerfil.addEventListener("click", function(){
+
+    fotoPerfil.style.border = "5px solid #5b4bff";
+
+});
+
+// ================================
+// MENU ATIVO
+// ================================
+
+const links = document.querySelectorAll("nav a");
+
+links.forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        links.forEach(function(item){
+
+            item.classList.remove("active");
+
+        });
+
+        link.classList.add("active");
+
     });
-  });
-
-  // ================================================
-  // 3. EFEITO NA GALERIA DE FOTOS
-  // ================================================
-  const galeriaImagens = document.querySelectorAll('#galeria img');
-
-  galeriaImagens.forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
-
-      window.open(img.src, '_blank');
-    });
-  });
 
 });
