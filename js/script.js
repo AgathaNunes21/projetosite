@@ -6,7 +6,7 @@ const formulario = document.querySelector("form");
 
 const nome = document.querySelector("#nome");
 const email = document.querySelector("#email");
-const mensagem = document.querySelector("#mensagem");
+const mensagem = document.querySelector("#mensagem"); 
 
 formulario.addEventListener("submit", function(event){
 
